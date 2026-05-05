@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datapayment AI Agent</title>
+    <style>
+        body {
+            background: #0D0D1A;
+            color: #E4E4F0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            background: #16162A;
+            border: 2px solid #0088CC;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            background: linear-gradient(135deg, #0088CC, #00C9A7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0088CC;
+        }
+        .price span {
+            font-size: 18px;
+            color: #9B9BB4;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px 0;
+        }
+        .features li {
+            padding: 10px 0;
+            color: #9B9BB4;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .features li::before {
+            content: "✓ ";
+            color: #00C9A7;
+        }
+        .pay-btn {
+            background: linear-gradient(135deg, #0088CC, #0066AA);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .pay-btn:active {
+            transform: scale(0.97);
+        }
+        .ton-addr {
+            background: #1a1a3e;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+            color: #0088CC;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Datapayment AI Agent</h1>
+        <p>Автономные платежи в TON с ИИ</p>
+        <div class="price">5 <span>TON</span></div>
+        <p>/ месяц</p>
+        <ul class="features">
+            <li>1 AI-агент</li>
+            <li>10 подписок</li>
+            <li>Анализ рисков</li>
+            <li>Telegram-уведомления</li>
+        </ul>
+        <button class="pay-btn" onclick="showAddress()">💎 Оплатить TON</button>
+        <div class="ton-addr" id="addr" style="display:none;">
+            Отправьте 5 TON на:<br>
+            EQD5v4aFJ8pJxK3mN7qR9sT2wV1yX6zA0bC4dE8fG1hI2jK3<br>
+            <small>Пока тестовый адрес</small>
+        </div>
+    </div>
+    <script>
+        function showAddress() {
+            var a = document.getElementById('addr');
+            a.style.display = a.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
